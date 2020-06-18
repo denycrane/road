@@ -104,7 +104,7 @@
 			for(var i in a){
 				document.write("<br/>"+i+":"+a[i]);				
 			}
-			*/
+			
 			var a = new Array(5);
 			document.write("<br/>"+a.length);		
 			for(var i in a){
@@ -127,14 +127,118 @@
 				document.write("<br/>"+c[i]);		
 			}
 			
-			var d = Array[100,300,14];
+			
+			var d = [100,300,14];
+			
+			
+			d[40]=100011
 			document.write("<br/>"+d.length);		
 			for(var i in d){
+			  document.write("<br/>"+i);	
 				document.write("<br/>"+d[i]);		
 			}
 			
+			var a1 = [100,300,14];
+			var a2 = [2,33,31];
+			var a3 = [12,333,34];
+			var a = [a1,a2,a3]
+			for(var i in a){
+				document.write("<br/>"+i);
+				//document.write("<br/>"+i);
+				for(var m in a[i]){
+					document.write("<br/>"+a[i][m]);		
+				}
+				
+			}
 			
+			var a1 = [100,300,14];
+			var a2 = [2,33,31];
+			
+			document.write(a1.join("+"));	
+			
+			var a = a1.concat(a2)
+			document.write(a.join("*"));	
+			
+			var a1 = [100,300,14];
+			a1.push(3)
+			document.write(a1.join("*")+"<br/>");
+			a3 = a1.pop()
+			document.write(a1.join("*")+"<br/>");
+			document.write(a3);
+			
+			var a1 = [100,300,14];
+			a1.unshift(3)
+			document.write(a1.join("*")+"<br/>");
+			a2 = a1.shift();
+			a3 = a1.shift();
+			document.write(a1.join("*")+"<br/>");
+			document.write(a3,a2);
+			
+			
+			var a1 = [100,300,14];
+			document.write(a1.join("*")+"<br/>");
+			document.write(a1.reverse().join("*")+"<br/>");
+			document.write(a1.join("r")+"<br/><br/>");
+			document.write(a1.sort().join("*")+"<br/>");
+			document.write(a1.join("r")+"<br/><br/>");
+			a2 = a1.reverse();
+			document.write(a1.join("r")+"<br/>");
+			a3 = a1.sort();
+			document.write(a1.join("s")+"<br/>");
+			
+			var a1 = [100,300,14,33,11,2,334];
+			//document.write(a1.slice(-1).join("*")+"<br/>");
+			document.write(a1+"<br/>");
+			document.write(a1.splice(2,1)+"<br/>");
+			
+			var a2 = ["a","s","dd","ddf"];
+			//document.write(a1.slice(-1).join("*")+"<br/>");
+			document.write(a2+"<br/>");
+			a2.splice(2,1,"haha")
+			document.write(a2+"<br/>");
+			
+			//var arr = new Array(6)
+			
+			var arr= ["George","John","Thomas","James"]
+
+      document.write(arr + "<br />")
+      arr.splice(2,1,"William")
+      document.write(arr+ "<br />")
+			
+			var dd = new Date();
+			document.write(dd+ "<br />")
+			document.write(Math.E+ "<br />")
+			
+			function len(){
+				var str = document.getElementById("str").value
+				document.getElementById("count").value = str.length
+			}
+			
+			function len(){
+				var str = document.getElementById("str").value
+				document.getElementById("count").value = str.length
+			}
+			*/
+			function f1(){
+				//var s1 = document.getElementById("t1").innerText;
+			  //var s2;
+			
+				//s2=s1.bold();// statements					
+				//s2 = "haah"
+				document.getElementById("t1").innerHTML="haha";
+				}
+				
 			
 	</script>
+	<input type="text" id="str" value="" />
+	<br/>
+	<button onclick="len() ">计算字符数量</button>
+	<input type="text" id="count" />
+	
+	<span id="t1">北京</span>
+	
+	<button onclick="f1(); ">变粗</button>
+	
+		
 </body>
 </html>
