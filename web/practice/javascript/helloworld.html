@@ -282,7 +282,8 @@
 				//document.writeln(fm1);
 				var fm2 = document.getElementById("fm2").value;
 				document.forms[0].elements[fm1].value="test";		
-				document.forms[1].elements[fm1].value="eee";		  
+				document.forms[1].elements[fm1].value="eee";		
+				document.forms[1].ta1.value="eee";		  
 			}
 			
 	</script>
@@ -329,8 +330,13 @@
   	<input type="text" value="" />
   </form>
   <form>
-  	<input type="text" value="" />
-  	<input type="text" value="" />
+  	<input type="text" onfocus="f9(); " value="" /><br/>
+  	<input type="text" value="" /><br/>
+  	<textarea rows="30" cols="blue" name="ta1" /></textarea><br/>
+  	<input type="radio" value="a1" /><br/>
+  	<input type="radio" value="a2" /><br/>
+  	<input type="radio" value="a3" /><br/>
+  	<input type="checkbox" value="bb" /><br/>
   </form>
   <button onclick="f9(); ">f9</button>
 	
